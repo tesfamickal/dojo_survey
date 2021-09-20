@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<style>
+    form {
+        /* border: 1px solid black; */
+        width: 375px;
+        height: 500px;
+        border-radius: 20px;
+    }
+
+    #container {
+        height: 100vh;
+    }
+
+    #commnt {
+        height: 100px;
+    }
+
+    /* 
+    div {
+        border: 1px solid black;
+    } */
+</style>
+
+<body>
+    <div id="container" class="container d-flex justify-content-center align-items-center">
+        <form class="bg-secondary" method="POST" action="/process" id="commfform">
+            <h1 class="text-warning m-2">Dojo Survey</h1>
+            <div class="d-flex justify-content-center row-md-6 p-2 mt-4">
+                <label class>Your Name:</label>
+                <input type="text" name="name">
+            </div>
+            <div class="d-flex justify-content-center row-md-6 p-2">
+                <label>Dojo Location:</label>
+                <select name="location" id="select-location">
+                    <option value="">--Select a Location--</option>
+                    <option name="Chicago">Chicago</option>
+                    <option name="Seattle">Seattle</option>
+                    <option name="San Jose">San Jose</option>
+                    <option name="Online">Online</option>
+                    <option name="Burbank">Burbank</option>
+                </select>
+            </div>
+            <div class="d-flex justify-content-center row-md-6 p-2">
+                <label>Favorite Language:</label>
+                <select name="language" id="select-lang">
+                    <option name="">--Select a Language--</option>
+                    <option name="HTML">HTML</option>
+                    <option name="CSS">CSS</option>
+                    <option name="Pythond">Python</option>
+                    <option name="JavaScriptd">JavaScript</option>
+                    <option name="Java">Java</option>
+                </select>
+            </div>
+            <div class="d-flex justify-content-center row-md-6 p-2">
+                <label>Comments:</label>
+                <input id="commnt" type="text" name="comments">
+            </div>
+            <div class="d-flex justify-content-center p-3">
+                <button class="btn btn-warning" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
